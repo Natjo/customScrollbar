@@ -1,0 +1,44 @@
+.customScrollbar{
+	position: relative;
+	background: #f5f5f5;
+	width: 200px;
+	height: 210px;
+	border: #ddd 1px solid;
+
+	&:hover, &.onscroll{
+		.customScrollbar-scrollbar{
+			opacity: 1;
+		}
+	}
+}
+.customScrollbar-content{
+	--paddingVertical: 20px;
+	z-index: 0;
+	padding: var(--paddingVertical) 20px 0;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	-ms-overflow-style: none;  
+	scrollbar-width: none;
+		
+	>*:nth-last-child(1){
+		margin-bottom: var(--paddingVertical);
+	}
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+.customScrollbar-scrollbar{
+	width: 6px;
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	z-index: 10;
+	right: 3px;
+	top: 2px;
+	height: 0;
+	border-radius: 3px;
+	transition: opacity .3s ease;
+	opacity: 0;
+	cursor: pointer;
+}
