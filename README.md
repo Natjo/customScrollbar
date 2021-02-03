@@ -23,6 +23,6 @@
 import customScollbar from './modules/customScrollbar/customScrollbar.js';
 
 customScollbar();
-
+```
 ## Demo
 [See codepen demo](https://codepen.io/natjo/pen/QWymrQm?editors=1111)
